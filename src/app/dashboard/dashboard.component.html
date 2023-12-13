@@ -1,0 +1,23 @@
+<h1 align="center">Кондиционер</h1>
+<p>Температура</p>
+<mwl-gauge [max]="100" [dialStartAngle]="0" [dialEndAngle]="180" [value]="this.temperature" [animated]="true"
+    [animationDuration]="1">
+</mwl-gauge>
+<p>Целевая Температура: {{this.targetTemperature}}</p>
+<mat-slider [thumbLabel]="true" [tickInterval]="1" [max]="100" [min]="0" [step]="1" [(ngModel)]="this.targetTemperature" (change)="this.onTargetTemperature()">
+</mat-slider>
+<div class="toggles">
+    <mat-slide-toggle
+        [(ngModel)]="this.power"
+        (toggleChange)="this.onPower()"
+        color="primary">
+    Питание кондиционера
+    </mat-slide-toggle>
+    <mat-slide-toggle
+        [ngModel]="this.active"
+        [disabled]="true"
+        color="primary">
+    Режим охлаждения
+    </mat-slide-toggle>
+</div>
+<button class="disconnect" mat-raised-button color="warn" (click)="this.disconnect()">Отключиться</button>

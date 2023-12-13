@@ -1,0 +1,53 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    mat-slider {
+        width: 100%;
+    }
+
+    ::ng-deep .mat-slide-toggle.mat-disabled {
+        opacity: 1 !important;
+    }
+}
+
+p {
+    margin: 0;
+    text-align: center;
+}
+
+mwl-gauge {
+    width: 150px;
+    height: 150px;
+    display: block;
+  }
+  mwl-gauge > .gauge > .dial {
+    stroke: #eee;
+    stroke-width: 2;
+    fill: rgba(0, 0, 0, 0);
+  }
+  mwl-gauge > .gauge > .value {
+    stroke: rgb(47, 227, 255);
+    stroke-width: 2;
+    fill: rgba(0, 0, 0, 0);
+  }
+  mwl-gauge > .gauge > .value-text {
+    fill: rgb(47, 227, 255);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+.toggles {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.disconnect {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
