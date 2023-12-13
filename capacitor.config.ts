@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'ip_rgr',
   webDir: 'dist/ip_rgr',
   server: {
-    androidScheme: 'https'
+    androidScheme: 'http'
   }
 };
 
